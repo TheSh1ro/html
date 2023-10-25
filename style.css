@@ -1,6 +1,6 @@
 * {
   list-style-type: none;
-  transition: color 0.5s, background-color 0.5s;
+  transition: color 0.2s, background-color 0.2s;
 }
 
 body {
@@ -22,37 +22,46 @@ footer {
   padding: 20px 10px;
 }
 
+header div {
+  cursor: pointer;
+}
+
+header div:hover {
+  color: rgb(230, 230, 230);
+}
+
 #start {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-#start header {
+header {
   display: flex;
   align-items: center;
 }
 
-#start nav {
+nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   align-items: center;
   gap: 20px;
 }
 
-#start nav div {
+nav div {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-#start nav a {
+nav a {
   color: #fff;
   text-decoration: none;
 }
 
-#start nav a:hover {
+nav a:hover {
   text-decoration: underline;
+  color: rgb(230, 230, 230);
 }
 
 section {
@@ -85,20 +94,33 @@ section:nth-of-type(even) {
 .servicos-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   gap: 10px;
-  width: 100%;
 }
 
 .servico {
   text-align: center;
   width: 100%;
   margin: 10px 0;
+  background-color: lightblue;
+  width: 90%;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.servico:hover {
+  border: 2px solid black;
+  background-color: rgb(214, 255, 214);
 }
 
 .construction-image {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 30px;
+  border: 2px solid black;
 }
 
 #projetos {
@@ -110,8 +132,9 @@ section:nth-of-type(even) {
 .projetos-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 5px;
+  gap: 20px;
   width: 100%;
+  padding-block: 10px;
 }
 
 .projeto {
@@ -119,15 +142,8 @@ section:nth-of-type(even) {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #29b960;
-  min-height: 20vh;
   border: 2px solid transparent;
   cursor: pointer;
-}
-
-.projeto:hover {
-  background-color: transparent;
-  border: 2px solid green;
 }
 
 #contato {
@@ -137,6 +153,21 @@ section:nth-of-type(even) {
 }
 
 #faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0px;
+}
+ul > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* MAPA */
@@ -156,4 +187,21 @@ section:nth-of-type(even) {
 
 .gmap_iframe {
   height: 400px !important;
+}
+
+@media (max-width: 900px) {
+  #start {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  nav {
+    display: none;
+  }
+
+  .servicos-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+  }
 }
