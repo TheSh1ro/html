@@ -1,0 +1,159 @@
+* {
+  list-style-type: none;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+body {
+  font-family: Arial;
+  margin: 0px;
+  font-size: 18px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+header,
+nav,
+footer {
+  background-color: #29b960;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+#start {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#start header {
+  display: flex;
+  align-items: center;
+}
+
+#start nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  gap: 20px;
+}
+
+#start nav div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#start nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#start nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  min-height: 15vh;
+  padding: 20px;
+}
+
+section:nth-of-type(even) {
+  background-color: rgb(214, 255, 214);
+}
+
+#home {
+}
+
+#sobre {
+}
+
+#servicos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicos-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.servico {
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.construction-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projetos-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  width: 100%;
+}
+
+.projeto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #29b960;
+  min-height: 20vh;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.projeto:hover {
+  background-color: transparent;
+  border: 2px solid green;
+}
+
+#contato {
+}
+
+#localizacao {
+}
+
+#faq {
+}
+
+/* MAPA */
+.mapouter {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  height: 400px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 400px;
+}
+
+.gmap_iframe {
+  height: 400px !important;
+}
