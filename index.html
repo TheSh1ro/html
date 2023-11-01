@@ -8,46 +8,44 @@
   </head>
 
   <body>
-    <div id="start">
-      <header>
+    <header id="header">
+      <div class="logo">
         <div class="container">
           <h1>ConstruTec</h1>
           <p>Construindo o Futuro com Qualidade</p>
         </div>
-      </header>
-
+      </div>
+      
       <nav>
         <div class="container">
           <a href="#home">Inicio</a>
-          <a href="#sobre">Sobre nós</a>
+          <!-- <a href="#sobre">Sobre nós</a> -->
           <a href="#servicos">Serviços</a>
           <a href="#projetos">Projetos Recentes</a>
           <a href="#contato">Contato</a>
           <a href="#faq">FAQ</a>
         </div>
       </nav>
-    </div>
+    </header>
 
     <div class="main-content">
       <div class="container">
         <section id="home">
-          <h2>Início</h2>
-          <p>
-            Bem-vindo à página principal da ConstruTec. Aqui você encontrará
-            informações sobre nossa empresa de construção e nossos serviços
-            especializados.
-          </p>
+          <img src="https://www.embraplan.com.br/imagens/noticias/29c22e4f-2954-43f1-b320-6b82eaae5be4.jpg" alt="">
+          <div class="home-sobre">
+            <h2>Quem somos</h2>
+            <p class="text-animate">Nossa equipe de profissionais altamente qualificados está comprometida em realizar sua obra com excelência, oferecendo o melhor custo-benefício do mercado brasileiro. Com anos de experiência no setor de construção, estamos preparados para atender às suas necessidades de forma eficiente e no menor prazo possível.</p>
+          </div>
         </section>
 
-        <section id="sobre">
-          <h2>Sobre nós</h2>
-          <p>
+        <!-- <section id="sobre">
+          <h4>
             A ConstruTec é uma empresa de construção comprometida em fornecer
             soluções de construção de alta qualidade. Nosso objetivo é
             transformar projetos em realidade e contribuir para um futuro
             construído com excelência e inovação.
-          </p>
-        </section>
+          </h4>
+        </section> -->
 
         <section id="servicos">
           <h2>Nossos Serviços</h2>
@@ -65,6 +63,7 @@
                 luxuosos. Garantimos que seu lar seja construído com cuidado e
                 atenção aos detalhes.
               </p>
+              <img src="./hand.webp" alt="">
             </div>
             <div class="servico">
               <!-- <img
@@ -78,6 +77,7 @@
                 a ambientes desgastados. Seja para uma cozinha, sala de estar ou
                 banheiro, podemos criar um novo visual para sua casa.
               </p>
+              <img src="./hand.webp" alt="">
             </div>
             <div class="servico">
               <!-- <img
@@ -91,6 +91,7 @@
                 de construção comercial. Construímos lojas, escritórios e
                 espaços comerciais de acordo com as especificações do cliente.
               </p>
+              <img src="./hand.webp" alt="">
             </div>
           </div>
         </section>
@@ -99,7 +100,8 @@
           <h2>Nossos Projetos</h2>
           <div class="projetos-row">
             <div class="projeto">
-              <img
+              <img  height: 10vh;
+
                   src="https://images.arquidicas.com.br/wp-content/uploads/2015/09/09003713/casa-bonita-telhado.png"
                   alt="Serviço 1"
                   class="construction-image"
@@ -156,15 +158,15 @@
             <ul>
               <div>
                 <li style="font-weight: bold;">Como posso solicitar um orçamento?</li>
-                <li>Para solicitar um orçamento, você pode entrar em contato conosco de várias maneiras. Pode enviar um e-mail para <a href="mailto:contato@construtec.com">contato@construtec.com</a>, ligar para o número <a href="tel:(123) 456-7890">(123) 456-7890</a> ou preencher o formulário de contato em nosso site. Certifique-se de fornecer o máximo de informações possível sobre o projeto para que possamos oferecer um orçamento preciso.</li>
+                <li class="resposta">Para solicitar um orçamento, você pode entrar em contato conosco de várias maneiras. Pode enviar um e-mail para <a href="mailto:contato@construtec.com">contato@construtec.com</a>, ligar para o número <a href="tel:(123) 456-7890">(123) 456-7890</a> ou preencher o formulário de contato em nosso site. Certifique-se de fornecer o máximo de informações possível sobre o projeto para que possamos oferecer um orçamento preciso.</li>
               </div>
               <div>
                 <li style="font-weight: bold;">Quais áreas de construção vocês atendem?</li>
-                <li>Atendemos diversas áreas de construção, incluindo construção residencial, renovação de interiores e construção comercial. Isso significa que podemos ajudar a construir casas, apartamentos, escritórios, lojas e muito mais. Se você tiver um projeto específico em mente, entre em contato para discutir como podemos atender às suas necessidades.</li>
+                <li class="resposta">Atendemos diversas áreas de construção, incluindo construção residencial, renovação de interiores e construção comercial. Isso significa que podemos ajudar a construir casas, apartamentos, escritórios, lojas e muito mais. Se você tiver um projeto específico em mente, entre em contato para discutir como podemos atender às suas necessidades.</li>
               </div>
               <div>
                 <li style="font-weight: bold;">Qual é o prazo médio de conclusão dos projetos?</li>
-                <li>O prazo médio de conclusão dos projetos pode variar dependendo do tamanho e complexidade do projeto. Projetos menores, como renovações de interiores, geralmente podem ser concluídos em semanas ou meses. Projetos maiores, como construção residencial ou comercial, podem levar mais tempo, variando de meses a anos. O prazo exato será discutido e acordado no momento da consulta e planejamento do projeto.</li>
+                <li class="resposta">O prazo médio de conclusão dos projetos pode variar dependendo do tamanho e complexidade do projeto. Projetos menores, como renovações de interiores, geralmente podem ser concluídos em semanas ou meses. Projetos maiores, como construção residencial ou comercial, podem levar mais tempo, variando de meses a anos. O prazo exato será discutido e acordado no momento da consulta e planejamento do projeto.</li>
               </div>
             </ul>
           </section>
@@ -172,7 +174,7 @@
       </div>
     </div>
 
-    <footer>
+    <footer id="footer">
       <div class="container">&copy; 2023 ConstruTec</div>
     </footer>
   </body>
