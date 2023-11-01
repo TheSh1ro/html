@@ -4,6 +4,12 @@
   transition: color 0.2s, background-color 0.4s;
 }
 
+/* Criar uma rolagem suave */
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* Estilos para o corpo do documento */
 body {
   font-family: Arial;
@@ -21,9 +27,26 @@ body {
 #header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 35vh;
+  height: 20vh;
   background-color: orange;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
+
+#header.fixed {
+  height: 10vh;
+}
+
+#header.fixed .logo p {
+  display: none;
+}
+
+#header.fixed .logo h1 {
+  font-size: 1.5em; /* Tamanho menor para o logotipo */
+}
+
 
 /* Rodapé */
 #footer {
@@ -82,7 +105,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  height: 65vh;
+  height: 80vh;
   padding: 0;
   background-color: #29b960;
 }
@@ -96,8 +119,9 @@ section {
 #home > img {
   align-self: center;
   justify-self: center;
-  width: 95%;
-  height: 90%;
+  width: 90%;
+  height: 85%;
+  border-radius: 20px;
 }
 
 #home > div {
@@ -120,29 +144,33 @@ section {
 /* Estilos para a seção Serviços */
 #servicos {
   background-color: orange;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.servicos-row {
+.servicos-title {
+  padding-inline: 40px;
+}
+
+.servicos-group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  padding-bottom: 30px;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .servico {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 250px;
-  width: 300px;
+  height: 300px;
   border: 5px double black;
   padding: 10px;
   cursor: pointer;
   background-color: #29b960;
   position: relative;
+  border-radius: 10px;
 }
 
 .servico:hover {
@@ -163,7 +191,6 @@ section {
   height: auto;
   object-fit: cover;
   border-radius: 30px;
-  border: 2px solid black;
 }
 
 /* Estilos para a seção Projetos */
@@ -187,8 +214,23 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 2px solid transparent;
+  border: 2px solid black;
+  border-radius: 30px;
   cursor: pointer;
+  position: relative;
+}
+
+.projeto > h3 {
+  position: absolute;
+  display: none;
+}
+
+.projeto:hover img {
+  filter: opacity(0.2);
+}
+
+.projeto:hover h3 {
+  display: flex;
 }
 
 /* Estilos para a seção Contato */
@@ -198,6 +240,7 @@ section {
 
 /* Estilos para a seção Localização */
 #localizacao {
+  height: fit-content;
   background-color: #29b960;
 }
 
@@ -226,37 +269,63 @@ ul > div {
 .mapouter {
   position: relative;
   text-align: right;
-  width: 100%;
-  height: 400px;
+  width: 60%;
+  height: 50vh;
+  border: 2px solid black;
+  border-radius: 30px;
+  transition: height 1s, width 1s;
+}
+
+.mapouter:hover {
+  height: 70vh;
+  width: 80%;
 }
 
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
   width: 100%;
-  height: 400px;
+  height: 100%;
 }
 
 .gmap_iframe {
-  height: 400px !important;
+  height: 100% !important;
+  border-radius: 30px;
 }
 
 /* Estilos responsivos */
-@media (max-width: 1080px) {
-  .servicos-row {
+@media (max-width: 1600px) {
+  .servicos-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
   }
 }
 
-@media (max-width: 720px) {
-  .servicos-row {
+@media (max-width: 1180px) {
+  #servicos {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .servicos-group {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 840px) {
+  #servicos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .servicos-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .servico {
+    height: 300px;
   }
 }
 
