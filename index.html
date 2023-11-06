@@ -18,11 +18,12 @@
       
       <nav>
         <div class="container">
-          <!-- <a href="#servicos">Serviços</a> -->
-          <a onclick="scrollToSection()">Serviços</a>
-          <a href="#projetos">Projetos Recentes</a>
-          <a href="#contato">Contato</a>
-          <a href="#faq">FAQ</a>
+          <a onclick="scrollToSection('home')">Home</a>
+          <a onclick="scrollToSection('servicos')">Serviços</a>
+          <a onclick="scrollToSection('projetos')">Projetos Recentes</a>
+          <a onclick="scrollToSection('contato')">Contato</a>
+          <a onclick="scrollToSection('localizacao')">Localização</a>
+          <a onclick="scrollToSection('faq')">FAQ</a>
         </div>
       </nav>
     </header>
@@ -177,8 +178,8 @@
     </footer>
   </body>
   <script>    
-  function scrollToSection() {
-  const servicesSection = document.getElementById('servicos');
+  function scrollToSection(id) {
+  const servicesSection = document.getElementById(id);
   if (servicesSection) {
     const targetPosition = servicesSection.getBoundingClientRect().top + window.scrollY - 10 * window.innerHeight / 100;
     window.scrollTo({
@@ -191,12 +192,16 @@
   
     window.addEventListener("scroll", function() {
   const header = document.getElementById("header");
-  if (window.scrollY > 0) {
+  if (window.scrollY > 10) {
     header.classList.add("fixed");
   } else {
     header.classList.remove("fixed");
   }
 });
 
+  window.onload = function() {
+    const header = document.getElementById("header");
+    header.classList.remove("fixed");
+  }
   </script>
 </html>
