@@ -18,7 +18,8 @@
       
       <nav>
         <div class="container">
-          <a href="#servicos">Serviços</a>
+          <!-- <a href="#servicos">Serviços</a> -->
+          <a onclick="scrollToSection()">Serviços</a>
           <a href="#projetos">Projetos Recentes</a>
           <a href="#contato">Contato</a>
           <a href="#faq">FAQ</a>
@@ -36,7 +37,7 @@
           </div>
         </section>
 
-        <section id="servicos">
+        <section id="servicos" >
           <h2 class="servicos-title">Serviços que a nossa empresa oferece para você!</h2>
           <div class="servicos-group">
             <div class="servico">
@@ -175,7 +176,19 @@
       <div class="container">&copy; 2023 ConstruTec</div>
     </footer>
   </body>
-  <script>
+  <script>    
+  function scrollToSection() {
+  const servicesSection = document.getElementById('servicos');
+  if (servicesSection) {
+    const targetPosition = servicesSection.getBoundingClientRect().top + window.scrollY - 10 * window.innerHeight / 100;
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+  }
+}
+
+  
     window.addEventListener("scroll", function() {
   const header = document.getElementById("header");
   if (window.scrollY > 0) {
