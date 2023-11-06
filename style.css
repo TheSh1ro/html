@@ -7,8 +7,8 @@
 /* Criar uma rolagem suave */
 html {
   scroll-behavior: smooth;
+  background-color: orange;
 }
-
 
 /* Estilos para o corpo do documento */
 body {
@@ -30,9 +30,12 @@ body {
   height: 20vh;
   background-color: orange;
   width: 100%;
+  overflow: hidden;
+
   position: fixed;
   top: 0;
   z-index: 1000;
+  transition: height 0.2s;
 }
 
 #header.fixed {
@@ -46,7 +49,6 @@ body {
 #header.fixed .logo h1 {
   font-size: 1.5em; /* Tamanho menor para o logotipo */
 }
-
 
 /* Rodapé */
 #footer {
@@ -108,6 +110,7 @@ section {
   height: 80vh;
   padding: 0;
   background-color: #29b960;
+  margin-top: 20vh;
 }
 
 .home-sobre {
@@ -306,7 +309,7 @@ ul > div {
     display: flex;
     flex-direction: column;
   }
-  
+
   .servicos-group {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
